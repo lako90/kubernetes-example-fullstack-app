@@ -1,5 +1,5 @@
 kind: Deployment
-apiVersion: v1
+apiVersion: apps/v1beta1
 metadata:
   name: efa-frontend-deployment
   labels:
