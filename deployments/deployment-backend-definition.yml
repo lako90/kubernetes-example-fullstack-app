@@ -17,6 +17,7 @@ spec:
       containers:
         - name: efa-backend
           image: lako90/efa-backend
+          imagePullPolicy: Always
   selector:
     matchLabels:
       tier: backend
