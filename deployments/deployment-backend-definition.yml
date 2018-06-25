@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: efa-backend-deployment
+  labels:
+    app: efa
+    tier: backend
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: efa-frontend-pod
+      labels:
+        app: efa
+        tier: backend
+    spec:
+      containers:
+        - name: efa-backend
+          image: lako90/efa-backend
+  selector:
+    matchLabels:
+      tier: backend
